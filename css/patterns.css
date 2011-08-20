@@ -1,3 +1,107 @@
+/* =============================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+    display: inline-block;
+    padding: 5px 14px 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.25); /* need fallbacks */
+    margin: 0;
+    font-size: 13px;
+    line-height: normal;
+    white-space: nowrap; 
+    cursor: pointer; 
+    color: #333;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), color-stop(25%, #fff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(#fff, color-stop(25%, #fff), #e6e6e6);
+    background-image: -moz-linear-gradient(#fff, #fff 25%, #e6e6e6);
+    background-image: -ms-linear-gradient(#fff, color-stop(#fff, 0.25), #e6e6e6);
+    background-image: -o-linear-gradient(#fff, color-stop(#fff, 0.25), #e6e6e6);
+    background-image: linear-gradient(#fff, color-stop(#fff, 0.25), #e6e6e6);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    /* IE hacks */
+    *display: inline; 
+    *zoom: 1; 
+}
+
+.btn:hover,
+.btn:focus {
+    color: #333;
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+
+.btn:active {
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn.primary {
+    color: #fff;
+    background-color: #0064cd;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#049cdb), to(#0064cd));
+    background-image: -webkit-linear-gradient(#049cdb, #0064cd);
+    background-image: -moz-linear-gradient(#049cdb, #0064cd);
+    background-image: -ms-linear-gradient(#049cdb, #0064cd);
+    background-image: -o-linear-gradient(#049cdb, #0064cd);
+    background-image: linear-gradient(#049cdb, #0064cd);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*
+.btn.primary:hover {
+  color: #fff;
+}
+*/
+
+.btn.large {
+    padding-top: 10px;
+    padding-bottom: 11px;
+    font-size: 16px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.btn.small {
+    padding-right: 9px;
+    padding-left: 9px;
+    font-size: 11px;
+}
+
+.btn:disabled, 
+.btn.disabled {
+    background-image: none;
+    filter: alpha(opacity=65);
+    opacity: 0.65;
+    cursor: default;
+}
+
+/* 
+ * Remove inner padding and border in Firefox 
+ * Repeated in case forms.css is not included
+ */
+
+.btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
 
 /* Patterns.less
  * Repeatable UI elements outside the base styles provided from the scaffolding
