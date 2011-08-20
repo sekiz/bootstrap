@@ -1,118 +1,154 @@
-/*
- * Tables.less
- * Tables for, you guessed it, tabular data
- * ---------------------------------------- */
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
 table {
-  width: 100%;
-  margin-bottom: 18px;
-  padding: 0;
-  text-align: left;
-  border-collapse: separate;
-  font-size: 13px;
-}
-table th, table td {
-  padding: 10px 10px 9px;
-  line-height: 13.5px;
-  vertical-align: middle;
-  border-bottom: 1px solid #ddd;
-}
-table th {
-  padding-top: 9px;
-  font-weight: bold;
-  border-bottom-width: 2px;
-}
-table.zebra-striped tbody tr:nth-child(odd) td {
-  background-color: #f9f9f9;
-}
-table.zebra-striped tbody tr:hover td {
-  background-color: #f5f5f5;
-}
-table.zebra-striped th.header {
-  cursor: pointer;
-}
-table.zebra-striped th.header:after {
-  content: "";
-  float: right;
-  margin-top: 7px;
-  border-width: 0 4px 4px;
-  border-style: solid;
-  border-color: #000 transparent;
-  visibility: hidden;
-}
-table.zebra-striped th.headerSortUp, table.zebra-striped th.headerSortDown {
-  background-color: rgba(141, 192, 219, 0.25);
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-}
-table.zebra-striped th.header:hover:after {
-  visibility: visible;
-}
-table.zebra-striped th.actions:hover {
-  background-image: none;
-}
-table.zebra-striped th.headerSortDown:after, table.zebra-striped th.headerSortDown:hover:after {
-  visibility: visible;
-  filter: alpha(opacity=60);
-  -khtml-opacity: 0.6;
-  -moz-opacity: 0.6;
-  opacity: 0.6;
-}
-table.zebra-striped th.headerSortUp:after {
-  border-bottom: none;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #000;
-  visibility: visible;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  filter: alpha(opacity=60);
-  -khtml-opacity: 0.6;
-  -moz-opacity: 0.6;
-  opacity: 0.6;
-}
-table.zebra-striped th.blue {
-  color: #049cdb;
-  border-bottom-color: #049cdb;
-}
-table.zebra-striped th.headerSortUp.blue, table.zebra-striped th.headerSortDown.blue {
-  background-color: #ade6fe;
-}
-table.zebra-striped th.green {
-  color: #46a546;
-  border-bottom-color: #46a546;
-}
-table.zebra-striped th.headerSortUp.green, table.zebra-striped th.headerSortDown.green {
-  background-color: #cdeacd;
-}
-table.zebra-striped th.red {
-  color: #9d261d;
-  border-bottom-color: #9d261d;
-}
-table.zebra-striped th.headerSortUp.red, table.zebra-striped th.headerSortDown.red {
-  background-color: #f4c8c5;
-}
-table.zebra-striped th.yellow {
-  color: #ffc40d;
-  border-bottom-color: #ffc40d;
-}
-table.zebra-striped th.headerSortUp.yellow, table.zebra-striped th.headerSortDown.yellow {
-  background-color: #fff6d9;
-}
-table.zebra-striped th.orange {
-  color: #f89406;
-  border-bottom-color: #f89406;
-}
-table.zebra-striped th.headerSortUp.orange, table.zebra-striped th.headerSortDown.orange {
-  background-color: #fee9cc;
-}
-table.zebra-striped th.purple {
-  color: #7a43b6;
-  border-bottom-color: #7a43b6;
-}
-table.zebra-striped th.headerSortUp.purple, table.zebra-striped th.headerSortDown.purple {
-  background-color: #e2d5f0;
+    width: 100%;
+    margin-bottom: 18px;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 100%; /* remove? */
 }
 
+th,
+td {
+    padding: 10px 10px 9px;
+    line-height: 13.5px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    padding-top: 9px;
+    border-bottom-width: 2px;
+}
+
+/* Zebra-striped tables 
+   ========================================================================== */
+
+.zebra-striped tbody tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+}
+
+.zebra-striped tbody tr:hover td {
+    background-color: #f5f5f5;
+}
+
+/* Requires: tableSorter.js */
+
+.zebra-striped .header {
+    cursor: pointer;
+}
+
+.zebra-striped .headerSortUp, 
+.zebra-striped .headerSortDown {
+    background-color: rgba(141, 192, 219, 0.25);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.zebra-striped .actions:hover {
+    background-image: none; /* what is this style for? */
+}
+
+/* Create sorting arrow */
+
+.zebra-striped .header:after {
+    content: "";
+    float: right;
+    width: 0px;
+    height: 0px;
+    margin-top: 7px;
+    border-width: 0 4px 4px;
+    border-style: solid;
+    border-color: #000 transparent;
+    visibility: hidden;
+    -webkit-box-shadow: 0 1px 0 #fff;
+    -moz-box-shadow: 0 1px 0 #fff;
+    box-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.zebra-striped .header:hover:after {
+    visibility: visible;
+}
+
+.zebra-striped .headerSortUp:after,
+.zebra-striped .headerSortDown:after, 
+.zebra-striped .headerSortDown:hover:after {
+    visibility: visible;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+
+.zebra-striped .headerSortUp:after {
+    border-width: 4px 4px 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Colored table headers */
+
+.zebra-striped .blue {
+    color: #049cdb;
+    border-bottom-color: #049cdb;
+}
+
+.zebra-striped .blue.headerSortUp,
+.zebra-striped .blue.headerSortDown {
+    background-color: #ade6fe;
+}
+
+.zebra-striped .green {
+    color: #46a546;
+    border-bottom-color: #46a546;
+}
+
+.zebra-striped .green.headerSortUp, 
+.zebra-striped .green.headerSortDown {
+    background-color: #cdeacd;
+}
+
+.zebra-striped .red {
+    color: #9d261d;
+    border-bottom-color: #9d261d;
+}
+
+.zebra-striped .red.headerSortUp, 
+.zebra-striped .red.headerSortDown {
+    background-color: #f4c8c5;
+}
+
+.zebra-striped .yellow {
+    color: #ffc40d;
+    border-bottom-color: #ffc40d;
+}
+
+.zebra-striped .yellow.headerSortUp, 
+.zebra-striped .yellow.headerSortDown {
+    background-color: #fff6d9;
+}
+
+.zebra-striped .orange {
+    color: #f89406;
+    border-bottom-color: #f89406;
+}
+
+.zebra-striped .orange.headerSortUp, 
+.zebra-striped .orange.headerSortDown {
+    background-color: #fee9cc;
+}
+
+.zebra-striped .purple {
+    color: #7a43b6;
+    border-bottom-color: #7a43b6;
+}
+
+.zebra-striped .purple.headerSortUp, 
+.zebra-striped .purple.headerSortDown {
+    background-color: #e2d5f0;
+}
