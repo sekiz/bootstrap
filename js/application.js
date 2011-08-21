@@ -42,28 +42,33 @@ $(document).ready(function(){
   // Dropdown example for topbar nav
   // ===============================
 
-  $("body").bind("click", function(e) {
-    $("ul.menu-dropdown").hide();
-    $('a.menu').parent("li").removeClass("open").children("ul.menu-dropdown").hide();
-  });
+    var Bootstrap = {};
 
-  $("a.menu").click(function(e) {
-    var $target = $(this);
-    var $parent = $target.parent("li");
-    var $siblings = $target.siblings("ul.menu-dropdown");
-    var $parentSiblings = $parent.siblings("li");
-    if ($parent.hasClass("open")) {
-      $parent.removeClass("open");
-      $siblings.hide();
-    } else {
-      $parent.addClass("open");
-      $siblings.show();
-    }
-    $parentSiblings.children("ul.menu-dropdown").hide();
-    $parentSiblings.removeClass("open");
-    return false;
-  });
+    Bootstrap.dropdown = (function () {
+        var $allMenuEls = $('a.menu');
 
+	    // Hide all open menus and show the target's menu
+        $('body').delegate('a.menu', 'click', function (e) {
+            e.preventDefault();
+
+            var $this = $(this),
+                $parent = $this.parent();
+
+            $parent.toggleClass('open');
+            $allMenuEls.not($this).parent().removeClass('open');
+        });
+
+        // Hide all menus when clicking outside of them (i.e on the document)
+        $(document).click(function (e) {
+            var $target = $(e.target);
+            if ($target.parents('.open').length === 0) {
+                $allMenuEls.parent().removeClass('open');
+            }
+            e.stopPropagation();
+        });
+    }());
+
+	
 
   // table sort example
   // ==================
