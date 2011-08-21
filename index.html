@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Twitter Bootstrap</title>
-
-        <!-- Le styles -->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- CSS -->
         <link rel="stylesheet" href="css/core.css">
         <link rel="stylesheet" href="css/preboot.css">
         <link rel="stylesheet" href="css/scaffolding.css">
@@ -12,7 +14,10 @@
         <link rel="stylesheet" href="css/tables.css">
         <link rel="stylesheet" href="css/patterns.css">
 
-        <!-- Le javascript -->
+        <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+        <!-- JavaScript -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
         <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
         <script src="js/application.js"></script>
@@ -20,7 +25,7 @@
 
     <body>
 
-        <div id="masthead" style="padding-top: 50px">
+        <div class="hero-unit">
             <div class="inner">
                 <div class="container">
                     <h1>Twitter Bootstrap</h1>
@@ -61,6 +66,40 @@
         </div>
 
         <div class="container">
+            <section id="about">
+                <div class="page-header">
+                    <h1>About Bootstrap <small>Brief history, browser support, and more</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span6 columns">
+                        <h3>History</h3>
+                        <p>In the earlier days of Twitter, engineers used almost any library they were familiar with to meet front-end requirements. Bootstrap began as an answer to the challenges that presented and development quickly accelerated during Twitter’s first Hackweek.</p>
+                        <p>With the help and feedback of many engineers at Twitter, Bootstrap has grown significantly to encompass not only basic styles, but more elegant and durable front-end design patterns.</p>
+                        <p>Read more on <a href="https://dev.twitter.com/blog/bootstrap-twitter">dev.twitter.com &rsaquo;</a></p>
+                    </div>
+                    <div class="span5 columns">
+                        <h3>Browser support</h3>
+                        <p>Bootstrap is tested and supported in modern browsers like Chrome, Safari, and Firefox. Full support for some versions of Internet Explorer is in the works.</p>
+                        <img src="assets/img/browsers.png" width="220px" height="48px" alt="Tested and supported in Chrome, Safari, and Firefox">
+                        <ul>
+                            <li>Latest Safari</li>
+                            <li>Latest Google Chrome</li>
+                            <li>Firefox v4</li>
+                        </ul>
+                    </div>
+                    <div class="span5 columns">
+                        <h3>What's included</h3>
+                        <p>Bootstrap comes complete with compiled CSS, uncompiled, and example templates.</p>
+                        <ul>
+                            <li>All original .less files</li>
+                            <li>Fully compiled and minified CSS</li>
+                            <li>Complete styleguide documentation</li>
+                            <li>Example page template (more to come soon)</li>
+                        </ul>
+                    </div>
+                </div> <!-- /row -->
+            </section>
+
             <section id="grid-system">
                 <div class="page-header">
                     <h1>Grid system <small>Rock the standard 940px or roll your own</small></h1>
@@ -264,16 +303,16 @@
                         <h3>Emphasis in a paragraph</h3>
                         <p><a href="#">Fusce dapibus</a>, <strong>tellus ac cursus commodo</strong>, <em>tortor mauris condimentum nibh</em>, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p>
                         <h3>Addresses</h3>
-                        <p>The <code>address</code> element is used for&mdash;you guessed it!&mdash;addresses. Here's how it looks:</p>
+                        <p>The <code>&lt;address&gt;</code> element is used for&mdash;you guessed it!&mdash;addresses. Here's how it looks:</p>
                         <address>
                             <strong>Twitter, Inc.</strong><br />
                             795 Folsom Ave, Suite 600<br />
                             San Francisco, CA 94107<br />
                             <abbr title="Phone">P:</abbr> (123) 456-7890
                         </address>
-                        <p><strong>Note:</strong> Each line in an <code>address</code> must end with a line-break (<code>&lt;br /&gt;</code>) to properly structure the content as it is read in real life without any styles applied.</p>
+                        <p><strong>Note:</strong> Each line in an <code>&lt;address&gt;</code> must end with a line-break (<code>&lt;br /&gt;</code>) to properly structure the content as it is read in real life without any styles applied.</p>
                         <h3>Abbreviations</h3>
-                        <p>For abbreviations and acronyms, use the <code>abbr</code> tag (<code>acronym</code> is deprecated in <abbr title="HyperText Markup Langugage 5">HTML5</abbr>). Put the shorthand form within the tag and set a title for the complete name.</p>
+                        <p>For abbreviations and acronyms, use the <code>&lt;abbr&gt;</code> tag (<code>&lt;acronym&gt;</code> is deprecated in <abbr title="HyperText Markup Langugage 5">HTML5</abbr>). Put the shorthand form within the tag and set a title for the complete name.</p>
                     </div>
                 </div>
 
@@ -287,7 +326,7 @@
                         </p>
                     </div>
                     <div class="span12 columns">
-                        <p>Be sure to wrap your <code>blockquote</code> around <code>paragraph</code> and <code>cite</code> tags. When citing a source, use the <code>cite</code> element. The CSS will automatically preface a name with an em dash (&amp;mdash;).</p>
+                        <p>Be sure to wrap your <code>&lt;blockquote&gt;</code> around <code>&lt;paragraph&gt;</code> and <code>&lt;cite&gt;</code> tags. When citing a source, use the <code>&lt;cite&gt;</code> element. The CSS will automatically preface a name with an em dash (&amp;mdash;).</p>
                         <blockquote>
     	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                             <cite>Dr. Julius Hibbert</cite>
@@ -361,7 +400,7 @@
                         </ol>
                     </div>
                     <div class="span4 columns">
-                        <h4>Description <code>dl</code></h4>
+                        <h4>Description <code>&lt;dl&gt;</code></h4>
                         <dl>
                             <dt>Description lists</dt>
                             <dd>A description list is perfect for defining terms.</dd>
@@ -395,8 +434,8 @@
                             <code>&lt;caption&gt;</code>
                         </p>
                         <p>Tables are great&mdash;for a lot of things. Great tables, however, need a bit of markup love to be useful, scalable, and readable (at the code level). Here are a few tips to help.</p>
-                        <p>Always wrap your column headers in a <code>thead</code> such that hierarchy is <code>thead</code> > <code>tr</code> > <code>th</code>.</p>
-                        <p>Similar to the column headers, all your table's body content should be wrapped in a <code>tbody</code> so your hierarchy is <code>tbody</code> > <code>tr</code> > <code>td</code>.</p>
+                        <p>Always wrap your column headers in a <code>&lt;thead&gt;</code> such that hierarchy is <code>&lt;thead&gt;</code> &gt; <code>&lt;tr&gt;</code> &gt; <code>&lt;th&gt;</code>.</p>
+                        <p>Similar to the column headers, all your table's body content should be wrapped in a <code>&lt;tbody&gt;</code> so your hierarchy is <code>&lt;tbody&gt;</code> &gt; <code>&lt;tr&gt;</code> &gt; <code>&lt;td&gt;</code>.</p>
                     </div>
                     <div class="span12 columns">
                         <h3>Example: Default table styles</h3>
@@ -774,7 +813,7 @@
                     </div>
                     <div class="span12 columns">
                         <h3>Example buttons</h3>
-                        <p>Button styles can be applied to anything with the <code>.btn</code> applied. Typically you'll want to apply these to only <code>a</code>, <code>button</code>, and select <code>input</code> elements. Here's how it looks:</p>
+                        <p>Button styles can be applied to anything with the <code>.btn</code> applied. Typically you'll want to apply these to only <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and select <code>&lt;input&gt;</code> elements. Here's how it looks:</p>
                         <div class="well" style="padding: 14px 19px;">
                             <button type="submit" class="btn primary">Submit</button>
                             <button type="submit" class="btn">Cancel</button>
@@ -790,7 +829,7 @@
                             <a href="#" class="btn small">Action</a>
                         </div>
                         <h3>Disabled state</h3>
-                        <p>For buttons that are not active or are disabled by the app for one reason or another, use the disabled state. That's <code>.disabled</code> for links and <code>:disabled</code> for <code>button</code> elements.</p>
+                        <p>For buttons that are not active or are disabled by the app for one reason or another, use the disabled state. That's <code>.disabled</code> for links and <code>:disabled</code> for <code>&lt;button&gt;</code> elements.</p>
                         <h4>Links</h4>
                         <div class="well">
                             <a href="#" class="btn large primary disabled">Primary action</a>
@@ -858,7 +897,7 @@
                 <div class="row">
                     <div class="span4 columns">
                         <h2>Tabs and pills</h2>
-                        <p>Create simple secondary navigation with a <code>ul</code>. Swap between tabs or pills by adding the appropriate class.</p>
+                        <p>Create simple secondary navigation with a <code>&lt;ul&gt;</code>. Swap between tabs or pills by adding the appropriate class.</p>
                         <p>Great for sub-sections of content like our account settings pages and user timelines for toggling between pages of like content. Available in tabbed or pill styles.</p>
                     </div>
                     <div class="span12 columns">
