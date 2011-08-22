@@ -68,7 +68,6 @@ th {
     -webkit-box-shadow: 0 1px 0 #fff;
     -moz-box-shadow: 0 1px 0 #fff;
     box-shadow: 0 1px 0 #fff;
-    filter: alpha(opacity=30);
     opacity: 0.3;
 }
 
@@ -80,7 +79,6 @@ th {
 .zebra-striped .headerSortDown:after, 
 .zebra-striped .headerSortDown:hover:after {
     visibility: visible;
-    filter: alpha(opacity=60);
     opacity: 0.6;
 }
 
