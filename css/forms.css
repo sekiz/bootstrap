@@ -431,6 +431,7 @@ ul.inputs-list input[type=radio], ul.inputs-list input[type=checkbox] {
 
 .form-stacked legend {
     margin-left: 0;
+    *margin-left: -7px;
 }
 
 .form-stacked label {
