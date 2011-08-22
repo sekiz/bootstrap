@@ -60,8 +60,8 @@
    ========================================================================== */
 
 .row {
+    margin: 0 -20px;
     *zoom: 1;
-    /*margin: 0 -20px;*/
 }
 
 .row:after {
@@ -88,6 +88,7 @@
 .row .span16 {
     float: left;
     margin-left: 20px;
+    *display: inline;
 }
 
 .row .span1 { width: 40px; }
@@ -107,50 +108,15 @@
 .row .span15 { width: 880px; }
 .row .span16 { width: 940px; }
 
-/* drop all this if neg margin test is successful */
-.row .span1:first-child,
-.row .span2:first-child,
-.row .span3:first-child,
-.row .span4:first-child,
-.row .span5:first-child,
-.row .span6:first-child,
-.row .span7:first-child,
-.row .span8:first-child,
-.row .span9:first-child,
-.row .span10:first-child,
-.row .span11:first-child,
-.row .span12:first-child,
-.row .span13:first-child,
-.row .span14:first-child,
-.row .span15:first-child,
-.row .span16:first-child {
-    margin-left: 0;
-}
-
-/* remove !important */
-.row .offset1 { margin-left: 80px !important; }
-.row .offset2 { margin-left: 140px !important; }
-.row .offset3 { margin-left: 200px !important; }
-.row .offset4 { margin-left: 260px !important; }
-.row .offset5 { margin-left: 320px !important; }
-.row .offset6 { margin-left: 380px !important; }
-.row .offset7 { margin-left: 440px !important; }
-.row .offset8 { margin-left: 500px !important; }
-.row .offset9 { margin-left: 500px !important; }
-.row .offset10 { margin-left: 620px !important; }
-.row .offset11 { margin-left: 680px !important; }
-.row .offset12 { margin-left: 740px !important; }
-
-/* drop all this if neg margin test is successful */
-.row .offset1:first-child { margin-left: 60px !important; }
-.row .offset2:first-child { margin-left: 120px !important; }
-.row .offset3:first-child { margin-left: 180px !important; }
-.row .offset4:first-child { margin-left: 240px !important; }
-.row .offset5:first-child { margin-left: 300px !important; }
-.row .offset6:first-child { margin-left: 360px !important; }
-.row .offset7:first-child { margin-left: 420px !important; }
-.row .offset8:first-child { margin-left: 480px !important; }
-.row .offset9:first-child { margin-left: 480px !important; }
-.row .offset10:first-child { margin-left: 600px !important; }
-.row .offset11:first-child { margin-left: 660px !important; }
-.row .offset12:first-child { margin-left: 720px !important; }
+.row .offset1 { margin-left: 80px; }
+.row .offset2 { margin-left: 140px; }
+.row .offset3 { margin-left: 200px; }
+.row .offset4 { margin-left: 260px; }
+.row .offset5 { margin-left: 320px; }
+.row .offset6 { margin-left: 380px; }
+.row .offset7 { margin-left: 440px; }
+.row .offset8 { margin-left: 500px; }
+.row .offset9 { margin-left: 500px; }
+.row .offset10 { margin-left: 620px; }
+.row .offset11 { margin-left: 680px; }
+.row .offset12 { margin-left: 740px; }
