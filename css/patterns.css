@@ -177,7 +177,9 @@
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-.topbar a:hover, 
+.topbar a:hover,
+.topbar a:focus,
+.topbar a:active,
 .topbar .active a {
     text-decoration: none;
     color: #fff;
@@ -282,7 +284,9 @@
     text-decoration: none;
 }
 
-.topbar ul li a:hover {
+.topbar ul li a:hover,
+.topbar ul li a:focus,
+.topbar ul li a:active {
     color: #fff;
     text-decoration: none;
 }
@@ -327,7 +331,9 @@
 }
 
 .topbar .menu.open .menu, 
-.topbar .menu.open a:hover {
+.topbar .menu.open a:hover,
+.topbar .menu.open a:focus,
+.topbar .menu.open a:active {
     background-color: #3c3c3c;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -342,7 +348,9 @@
     font-weight: normal;
 }
 
-.topbar .menu.open li a:hover {
+.topbar .menu.open li a:hover,
+.topbar .menu.open li a:focus,
+.topbar .menu.open li a:active {
     background-color: #474747;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -394,7 +402,9 @@
     color: #bbb;
 }
 
-.topbar ul li ul li a:hover {
+.topbar ul li ul li a:hover,
+.topbar ul li ul li a:focus,
+.topbar ul li ul li a:active {
     background-color: #333;
     background-color: rgba(255, 255, 255, 0.25);
     color: #fff;
@@ -504,7 +514,9 @@
     border-radius: 3px;
 }
 
-.alert-message a.close:hover {
+.alert-message a.close:hover,
+.alert-message a.close:focus,
+.alert-message a.close:active {
     text-decoration: none;
     filter: alpha(opacity=50);
     opacity: 0.5;
@@ -689,12 +701,16 @@
 }
 
 .pagination a:hover, 
+.pagination a:focus, 
+.pagination a:active, 
 .pagination .active a {
     background-color: #c7eefe;
 }
 
 .pagination .disabled a, 
-.pagination .disabled a:hover {
+.pagination .disabled a:hover,
+.pagination .disabled a:focus,
+.pagination .disabled a:active {
     background-color: none;
     color: #bfbfbf;
 }
