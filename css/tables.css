@@ -76,8 +76,7 @@ th {
 }
 
 .zebra-striped .headerSortUp:after,
-.zebra-striped .headerSortDown:after, 
-.zebra-striped .headerSortDown:hover:after {
+.zebra-striped .headerSortDown:after {
     visibility: visible;
     opacity: 0.6;
 }
