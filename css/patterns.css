@@ -661,7 +661,9 @@
 
 .pagination ul {
     float: left;
+    list-style: none;
     margin: 0;
+    border: 1px solid #ddd;
     border: 1px solid rgba(0, 0, 0, 0.15);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -672,13 +674,14 @@
 }
 
 .pagination li {
-    display: inline;
+    float: left;
 }
 
 .pagination a {
-    float: left;
+    display: block;
     padding: 0 14px;
     line-height: 34px;
+    border-right: 1px solid #ddd;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     text-decoration: none;
 }
@@ -694,8 +697,7 @@
     color: #bfbfbf;
 }
 
-.pagination .next a,
-.pagination :last-child a {
+.pagination .next a {
     border: 0;
 }
 
