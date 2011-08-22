@@ -832,36 +832,47 @@
     opacity: 0.8;
 }
 
+.twipsy .twipsy-arrow {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+}
+
 .twipsy.above .twipsy-arrow,
 .twipsy.below .twipsy-arrow {
-    bottom: 0;
     left: 50%;
     margin-left: -5px;
-    border-width: 5px 5px 0;
-    border-style: solid;
     border-color: #000 transparent;
 }
 
+.twipsy.above .twipsy-arrow {
+    bottom: 0;
+    border-bottom: 0;
+}
+
 .twipsy.below .twipsy-arrow {
-    bottom: auto;
     top: 0;
-    border-width: 0 5px 5px;
+    border-top: 0;
 }
 
 .twipsy.left .twipsy-arrow,
 .twipsy.right .twipsy-arrow {
     top: 50%;
-    right: 0;
     margin-top: -5px;
-    border-width: 5px 0 5px 5px;
-    border-style: solid;
     border-color: transparent #000;
+}
+
+.twipsy.left .twipsy-arrow {
+    right: 0;
+    border-right: 0;
 }
 
 .twipsy.right .twipsy-arrow {
     left: 0;
-    right: auto;
-    border-width: 5px 5px 5px 0;
+    border-left: 0;
 }
 
 .twipsy .twipsy-inner {
@@ -874,12 +885,6 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-}
-
-.twipsy .twipsy-arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
 }
 
 
@@ -896,42 +901,47 @@
     padding: 5px;
 }
 
+.popover .arrow {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+}
+
 .popover.above .arrow,
 .popover.below .arrow {
-    bottom: 0;
     left: 50%;
     margin-left: -5px;
-    border-width: 5px 5px 0;
-    border-style: solid;
     border-color: #000 transparent;
 }
 
-.popover.below .arrow {
-    bottom: auto;
-    top: 0;
-    border-width: 0 5px 5px;
+.popover.above .arrow {
+    bottom: 0;
+    border-bottom: 0;
 }
 
-.popover.right .arrow,
-.popover.left .arrow {
+.popover.below .arrow {
+    top: 0;
+    border-top: 0;
+}
+
+.popover.left .arrow,
+.popover.right .arrow {
     top: 50%;
-    left: 0;
     margin-top: -5px;
-    border-width: 5px 5px 5px 0;
-    border-style: solid;
     border-color: transparent #000;
 }
 
 .popover.left .arrow {
-    left: auto;
     right: 0;
-    border-width: 5px 0 5px 5px;
+    border-right: 0;
 }
 
-.popover .arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
+.popover.right .arrow {
+    left: 0;
+    border-left: 0;
 }
 
 .popover .inner {
