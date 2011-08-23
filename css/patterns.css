@@ -593,13 +593,6 @@
     *zoom: 1;
 }
 
-.tabs:after,
-.pills:after {
-    display: table;
-    content: "";
-    clear: both;
-}
-
 .tabs li,
 .pills li {
     float: left;
