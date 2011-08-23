@@ -12,9 +12,8 @@
         <link rel="stylesheet" href="css/forms.css">
         <link rel="stylesheet" href="css/tables.css">
         <link rel="stylesheet" href="css/patterns.css">
-        <style>
-            section {margin: 60px 0 0;}
-        </style>
+        <link rel="stylesheet" href="css/patterns.css">
+        <link rel="stylesheet" href="css/print.css">
 
         <!-- HTML5 shim, for IE6-8 support of HTML elements -->
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,6 +22,12 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
         <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
         <script src="js/application.js"></script>
+
+        <style>
+            /* only used for the style guide */
+            section { margin: 60px 0 0; }
+            .show-grid .column { margin-bottom: 5px; text-align:center; background: #ddd; }
+        </style>
     </head>
 
     <body>
@@ -30,11 +35,12 @@
         <div class="hero-unit">
             <div class="inner">
                 <div class="container">
-                    <h1>Twitter Bootstrap</h1>
+                    <h1>Twitter Bootstrap (CSS)</h1>
                     <p class="lead">
-                        Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.<br />
-                        It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.<br />
+                        A &quot;CSS port&quot; and customisation of Twitter Bootstrap<br>
+                        Includes: CSS normalization, H5BP print styles, improved browser support, improved patterns.
                     </p>
+                    <p><a target="_blank" href="https://github.com/necolas/bootstrap-css" class="btn primary">Bootstrap-CSS on GitHub &raquo;</a></p>
                     <p><a target="_blank" href="https://github.com/twitter/bootstrap" class="btn primary">Bootstrap on GitHub &raquo;</a></p>
                 </div><!-- /container -->
             </div>
@@ -46,31 +52,23 @@
                     <h1>About Bootstrap <small>Brief history, browser support, and more</small></h1>
                 </div>
                 <div class="row">
-                    <div class="span6 columns">
+                    <div class="span6 column">
                         <h3>History</h3>
                         <p>In the earlier days of Twitter, engineers used almost any library they were familiar with to meet front-end requirements. Bootstrap began as an answer to the challenges that presented and development quickly accelerated during Twitter’s first Hackweek.</p>
                         <p>With the help and feedback of many engineers at Twitter, Bootstrap has grown significantly to encompass not only basic styles, but more elegant and durable front-end design patterns.</p>
                         <p>Read more on <a href="https://dev.twitter.com/blog/bootstrap-twitter">dev.twitter.com &rsaquo;</a></p>
                     </div>
-                    <div class="span5 columns">
+                    <div class="span5 column">
                         <h3>Browser support</h3>
                         <p>Bootstrap is tested and supported in modern browsers like Chrome, Safari, and Firefox. Full support for some versions of Internet Explorer is in the works.</p>
-                        <img src="img/browsers.png" width="220px" height="48px" alt="Tested and supported in Chrome, Safari, and Firefox">
                         <ul>
                             <li>Latest Safari</li>
                             <li>Latest Google Chrome</li>
                             <li>Firefox v4</li>
                         </ul>
                     </div>
-                    <div class="span5 columns">
+                    <div class="span5 column">
                         <h3>What's included</h3>
-                        <p>Bootstrap comes complete with compiled CSS, uncompiled, and example templates.</p>
-                        <ul>
-                            <li>All original .less files</li>
-                            <li>Fully compiled and minified CSS</li>
-                            <li>Complete styleguide documentation</li>
-                            <li>Example page template (more to come soon)</li>
-                        </ul>
                     </div>
                 </div> <!-- /row -->
             </section>
@@ -80,18 +78,18 @@
                     <h1>Grid system <small>Rock the standard 940px or roll your own</small></h1>
                 </div>
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Default grid</h2>
                         <p>The default grid system provided as part of Bootstrap is a 940px wide 16-column grid. It's a flavor of the popular 960 grid system, but without the additional margin/padding on the left and right sides.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <h3>Example grid markup</h3>
                         <p>As shown here, a basic layout can be created with two "columns," each spanning a number of the 16 foundational columns we defined as part of our grid system. See the examples below for more variations.</p>
 <pre class="prettyprint linenums">&lt;div class="row"&gt;
-    &lt;div class="span6 columns"&gt;
+    &lt;div class="span6 column"&gt;
         ...
     &lt;/div&gt;
-    &lt;div class="span10 columns"&gt;
+    &lt;div class="span10 column"&gt;
         ...
     &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -121,70 +119,70 @@
                 </div>
 
                 <div class="row show-grid" title="8 column layout">
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
-                    <div class="span2 columns">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
+                    <div class="span2 column">2</div>
                 </div>
 
                 <div class="row show-grid" title="Example uncommon layout">
-                    <div class="span3 columns">3</div>
-                    <div class="span3 columns">3</div>
-                    <div class="span3 columns">3</div>
-                    <div class="span3 columns">3</div>
-                    <div class="span3 columns">3</div>
+                    <div class="span3 column">3</div>
+                    <div class="span3 column">3</div>
+                    <div class="span3 column">3</div>
+                    <div class="span3 column">3</div>
+                    <div class="span3 column">3</div>
                     <div class="span1 column">1</div>
                 </div>
 
                 <div class="row show-grid" title="Four column layout">
-                    <div class="span4 columns">4</div>
-                    <div class="span4 columns">4</div>
-                    <div class="span4 columns">4</div>
-                    <div class="span4 columns">4</div>
+                    <div class="span4 column">4</div>
+                    <div class="span4 column">4</div>
+                    <div class="span4 column">4</div>
+                    <div class="span4 column">4</div>
                 </div>
 
                 <div class="row show-grid" title="Irregular three column layout">
-                    <div class="span4 columns">4</div>
-                    <div class="span6 columns">6</div>
-                    <div class="span6 columns">6</div>
+                    <div class="span4 column">4</div>
+                    <div class="span6 column">6</div>
+                    <div class="span6 column">6</div>
                 </div>
 
                 <div class="row show-grid" title="Half and half">
-                    <div class="span8 columns">8</div>
-                    <div class="span8 columns">8</div>
+                    <div class="span8 column">8</div>
+                    <div class="span8 column">8</div>
                 </div>
 
                 <div class="row show-grid" title="Example uncommon two-column layout">
-                    <div class="span5 columns">5</div>
-                    <div class="span11 columns">11</div>
+                    <div class="span5 column">5</div>
+                    <div class="span11 column">11</div>
                 </div>
 
                 <div class="row show-grid" title="Unnecessary single column layout">
-                    <div class="span16 columns">16</div>
+                    <div class="span16 column">16</div>
                 </div>
 
                 <h4>Offsetting columns</h4>
                 <div class="row show-grid">
-                    <div class="span4 columns">4</div>
-                    <div class="span8 columns offset4">8 offset 4</div>
+                    <div class="span4 column">4</div>
+                    <div class="span8 column offset4">8 offset 4</div>
                 </div>
 
                 <div class="row show-grid">
-                    <div class="span4 columns offset4">4 offset 4</div>
-                    <div class="span4 columns offset4">4 offset 4</div>
+                    <div class="span4 column offset4">4 offset 4</div>
+                    <div class="span4 column offset4">4 offset 4</div>
                 </div>
 
                 <div class="row show-grid">
-                    <div class="span5 columns offset3">5 offset 3</div>
-                    <div class="span5 columns offset3">5 offset 3</div>
+                    <div class="span5 column offset3">5 offset 3</div>
+                    <div class="span5 column offset3">5 offset 3</div>
                 </div>
 
                 <div class="row show-grid">
-                    <div class="span10 columns offset6">10 offset 6</div>
+                    <div class="span10 column offset6">10 offset 6</div>
                 </div>
             </section>
 
@@ -194,11 +192,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Fixed layout</h2>
                         <p>A basic 940px wide, centered container layout for just about any site or page.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="mini-layout">
                             <div class="mini-layout-body"></div>
                         </div>
@@ -211,12 +209,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Fluid layout</h2>
                         <p>A flexible fluid or liquid page structure with min- and max-widths and a left-hand sidebar. Great for apps.</p>
                     </div>
 
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="mini-layout fluid">
                             <div class="mini-layout-sidebar"></div>
                             <div class="mini-layout-body"></div>
@@ -241,11 +239,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Headings and copy</h2>
                         <p>A standard typographic hierarchy for structuring your webpages.</p>
                     </div>
-                    <div class="span6 columns">
+                    <div class="span6 column">
                         <h1>h1. Heading 1</h1>
                         <h2>h2. Heading 2</h2>
                         <h3>h3. Heading 3</h3>
@@ -253,7 +251,7 @@
                         <h5>h5. Heading 5</h5>
                         <h6>h6. Heading 6</h6>
                     </div>
-                    <div class="span6 columns">
+                    <div class="span6 column">
                         <h3>Example paragraph</h3>
                         <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                         <h1>Example heading<small>Has sub-heading...</small></h1>
@@ -262,7 +260,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Misc. elements</h2>
                         <p>Using emphasis, addresses, &amp; abbreviations</p>
                         <p>
@@ -272,7 +270,7 @@
                             <code>&lt;abbr&gt;</code>
                         </p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <h4>When to use</h4>
                         <p>Emphasis tags (<code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>) should be used to add visual distinction between a word or phrase and its surrounding copy. Use <code>&lt;strong&gt;</code> for plain old attention and <code>&lt;em&gt;</code> for <em>slick</em> attention and titles.</p>
                         <h3>Emphasis in a paragraph</h3>
@@ -292,7 +290,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Blockquotes</h2>
                         <p>
                             <code>&lt;blockquote&gt;</code>
@@ -300,7 +298,7 @@
                             <code>&lt;cite&gt;</code>
                         </p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <p>Be sure to wrap your <code>&lt;blockquote&gt;</code> around <code>&lt;paragraph&gt;</code> and <code>&lt;cite&gt;</code> tags. When citing a source, use the <code>&lt;cite&gt;</code> element. The CSS will automatically preface a name with an em dash (&amp;mdash;).</p>
                         <blockquote>
     	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
@@ -311,7 +309,7 @@
 
                 <h2>Lists</h2>
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h4>Unordered <code>&lt;ul&gt;</code></h4>
                         <ul>
                             <li>Jeremy Bixby</li>
@@ -332,7 +330,7 @@
                             <li>Kevin Garnett</li>
                         </ul>
                     </div>
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h4>Unstyled <code>&lt;ul.unstyled&gt;</code></h4>
                         <ul class="unstyled">
                             <li>Jeremy Bixby</li>
@@ -353,7 +351,7 @@
                             <li>Kevin Garnett</li>
                         </ul>
                     </div>
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h4>Ordered <code>&lt;ol&gt;</code></h4>
                         <ol>
                             <li>Jeremy Bixby</li>
@@ -374,7 +372,7 @@
                             <li>Kevin Garnett</li>
                         </ol>
                     </div>
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h4>Description <code>&lt;dl&gt;</code></h4>
                         <dl>
                             <dt>Description lists</dt>
@@ -396,7 +394,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Building tables</h2>
                         <p>
                             <code>&lt;table&gt;</code>
@@ -412,7 +410,7 @@
                         <p>Always wrap your column headers in a <code>&lt;thead&gt;</code> such that hierarchy is <code>&lt;thead&gt;</code> &gt; <code>&lt;tr&gt;</code> &gt; <code>&lt;th&gt;</code>.</p>
                         <p>Similar to the column headers, all your table's body content should be wrapped in a <code>&lt;tbody&gt;</code> so your hierarchy is <code>&lt;tbody&gt;</code> &gt; <code>&lt;tr&gt;</code> &gt; <code>&lt;td&gt;</code>.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <h3>Example: Default table styles</h3>
                         <p>All tables will be automatically styled with only the essential borders to ensure readability and maintain structure. No need to add extra classes or attributes.</p>
                         <table>
@@ -536,11 +534,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Default styles</h2>
                         <p>All forms are given default styles to present them in a readable and scalable way. Styles are provided for text inputs, select lists, textareas, radio buttons and checkboxes, and buttons.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <form>
                             <fieldset>
                                 <legend>Example form legend</legend>
@@ -720,11 +718,11 @@
                 <br />
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Stacked forms</h2>
                         <p>Add <code>.form-stacked</code> to your form's HTML and you'll have labels on top of their fields instead of to their left. This works great if your forms are short or you have two columns of inputs for heavier forms.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <form class="form-stacked" action="#">
                             <fieldset>
                                 <legend>Example form legend</legend>
@@ -781,12 +779,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Buttons</h2>
                         <p>As a convention, buttons are used for actions while links are used for objects. For instance, "Download" could be a button and "recent activity" could be a link.</p>
                         <p>All buttons default to a light gray style, but a blue <code>.primary</code> class is available. Plus, rolling your own styles is easy peasy.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <h3>Example buttons</h3>
                         <p>Button styles can be applied to anything with the <code>.btn</code> applied. Typically you'll want to apply these to only <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and select <code>&lt;input&gt;</code> elements. Here's how it looks:</p>
                         <div class="well" style="padding: 14px 19px;">
@@ -856,15 +854,15 @@
                 </div> <!-- topbar-wrapper -->
 
                 <div class="row">
-                    <div class="span5 columns">
+                    <div class="span5 column">
                         <h4>What is it</h4>
                         <p>Our topbar is a fixed bar that houses a website's logo or name, primary navigation, and search form.</p>
                     </div>
-                    <div class="span5 columns">
+                    <div class="span5 column">
                         <h4>Customizable</h4>
                         <p>All elements within, and the entire topbar as well, are optional. You can choose to include a logo/name, nav, search, and a secondary nav&mdash;or any combination of that.</p>
                     </div>
-                    <div class="span6 columns">
+                    <div class="span6 column">
                         <h4>Dropdowns included</h4>
                         <p>As part of the main navigation, we've included the ability for you to add dropdowns to your nav. Check out the secondary nav above (right aligned) to see how it's done.</p>
                     </div>
@@ -873,12 +871,12 @@
                 <br />
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Tabs and pills</h2>
                         <p>Create simple secondary navigation with a <code>&lt;ul&gt;</code>. Swap between tabs or pills by adding the appropriate class.</p>
                         <p>Great for sub-sections of content like our account settings pages and user timelines for toggling between pages of like content. Available in tabbed or pill styles.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <ul class="tabs">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Profile</a></li>
@@ -911,11 +909,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Pagination</h2>
                         <p>Ultra simplistic and minimally styled pagination inspired by Rdio. The large block is hard to miss, easily scalable, and provides large click areas.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="pagination">
                             <ul>
                                 <li class="prev disabled"><a href="#">&larr; Previous</a></li>
@@ -978,11 +976,11 @@
                     <h1>Alerts &amp; Errors <small>Styles for success, warning, and error messages or alerts</small></h1>
                 </div>
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Basic alerts</h2>
                         <p>One-line messages for highlighting the failure, possible failure, or success of an action. Particularly useful for forms.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="alert-message error">
                             <a class="close" href="#">&times;</a>
                             <p><strong>Oh snap!</strong> Change this and that and try again.</p>
@@ -1002,11 +1000,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Block messages</h2>
                         <p>For messages that require a bit of explanation, we have paragraph style alerts. These are perfect for bubbling up longer error messages, warning a user of a pending action, or just presenting information for more emphasis on the page.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="alert-message block-message error">
                             <a class="close" href="#">&times;</a>
                             <p><strong>Oh snap! You got an error!</strong> Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
@@ -1036,11 +1034,11 @@
                     <h1>Popovers <small>Components for displaying content in modals, tooltips, and popovers</small></h1>
                 </div>
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Modals</h2>
                         <p>Modals&mdash;dialogs or lightboxes&mdash;are great for contextual actions in situations where it's important that the background context be maintained.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="well" style="background-color: rgba(0,0,0,0.5); border: none; padding: 40px;">
                             <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
                                 <div class="modal-header">
@@ -1060,11 +1058,11 @@
                 </div> <!-- /row -->
                 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Tool Tips</h2>
                         <p>Twipsies are super useful for aiding a confused user and pointing them in the right direction.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="twipsies well">
                             <div style="position: relative">
                                 <p class="muted" style="margin-bottom: 0">
@@ -1092,14 +1090,14 @@
                 </div> <!-- /row -->
 
                 <div class="row">
-                    <div class="span4 columns">
+                    <div class="span4 column">
                         <h2>Popovers</h2>
                         <p>Use popovers to provide subtextual information to a page without effecting layout.</p>
                     </div>
-                    <div class="span12 columns">
+                    <div class="span12 column">
                         <div class="well popover-well">
                             <div class="popover-wrapper" style="position: relative; zoom: 1;">
-                                <div class="popover left" style="display: block;">
+                                <div class="popover left" style="position: relative; display: block;">
                                     <div class="arrow"></div>
                                     <div class="inner">
                                         <h3 class="title">Popover Title</h3>
@@ -1108,7 +1106,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img class="large-bird" src="img/bird.png" style="margin-left: 50%; display:block;">
                             </div>
                         </div>
                     </div>
