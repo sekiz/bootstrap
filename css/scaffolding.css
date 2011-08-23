@@ -70,22 +70,7 @@
     content: "";
 }
 
-.row .span1,
-.row .span2,
-.row .span3,
-.row .span4,
-.row .span5,
-.row .span6,
-.row .span7,
-.row .span8,
-.row .span9,
-.row .span10,
-.row .span11,
-.row .span12,
-.row .span13,
-.row .span14,
-.row .span15,
-.row .span16 {
+.row .column {
     float: left;
     margin-left: 20px;
     *display: inline;
