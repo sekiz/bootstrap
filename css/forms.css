@@ -103,12 +103,15 @@ input::-moz-focus-inner {
     *zoom: 1;
 }
 
+.field:before,
 .field:after {
     content: "";
-    clear: both;
     display: table;
 }
 
+.field:after {
+    clear: both;
+}
 
 /* needs refactor */
 
@@ -140,7 +143,6 @@ textarea {
     *overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
     height: auto;
 }
-
 
 select, 
 input[type=file] {

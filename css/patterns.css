@@ -799,12 +799,6 @@
     zoom: 1;
 }
 
-.modal .modal-footer:after {
-    display: table;
-    content: "";
-    clear: both;
-}
-
 .modal .modal-footer .btn {
     float: right;
     margin-left: 10px;
