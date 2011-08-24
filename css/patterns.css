@@ -500,7 +500,7 @@
     background-color: #30c0fb;
 }
 
-.alert-message a.close {
+.alert-message .close {
     float: right;
     margin-top: -2px;
     color: #fff;
@@ -514,9 +514,9 @@
     border-radius: 3px;
 }
 
-.alert-message a.close:hover,
-.alert-message a.close:focus,
-.alert-message a.close:active {
+.alert-message .close:hover,
+.alert-message .close:focus,
+.alert-message .close:active {
     text-decoration: none;
     filter: alpha(opacity=50);
     opacity: 0.5;
@@ -553,7 +553,7 @@
     display: block;
 }
 
-.block-message a.close {
+.block-message .close {
     display: block;
     color: #404040;
     color: rgba(0, 0, 0, 0.5);
@@ -773,7 +773,7 @@
     padding: 5px 20px;
 }
 
-.modal .modal-header a.close {
+.modal .modal-header .close {
     position: absolute;
     right: 10px;
     top: 10px;
