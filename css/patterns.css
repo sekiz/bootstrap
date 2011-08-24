@@ -485,41 +485,38 @@
 }
 
 .alert-message.error {
-    background-color: #e06359;
+    background-color: #d83a2e;
 }
 
 .alert-message.warning {
-    background-color: #ffd75a;
+    background-color: #ffd040;
 }
 
 .alert-message.success {
-    background-color: #74c474;
+    background-color: #62bc62;
 }
 
 .alert-message.info {
-    background-color: #30c0fb;
+    background-color: #04aef4;
 }
 
 .alert-message .close {
     float: right;
     margin-top: -2px;
-    color: #fff;
+    color: #000;
     font-size: 20px;
     font-weight: bold;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
 }
 
 .alert-message .close:hover,
 .alert-message .close:focus,
 .alert-message .close:active {
     text-decoration: none;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
 }
 
 
